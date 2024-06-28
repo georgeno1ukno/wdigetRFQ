@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QuoteDashboard from "./components/QuoteDashboard";
 import RFQForm from "./components/RFQForm";
+import "./styles/App.css";
 
 const App: React.FC = () => {
   const [refreshTrigger, setRefreshTrigger] = useState(false);

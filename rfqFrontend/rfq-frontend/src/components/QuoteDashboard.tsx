@@ -43,7 +43,7 @@ const QuoteDashboard: React.FC<QuoteDashboardProps> = ({ refreshTrigger }) => {
   };
 
   return (
-    <div>
+    <div className="quote-list">
       <h1>Quote Dashboard</h1>
       <ul>
         {quotes.map((quote) => (
