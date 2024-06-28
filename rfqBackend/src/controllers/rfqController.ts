@@ -20,8 +20,8 @@ export const handleRFQ = async (req: Request, res: Response) => {
 
     const newQuote: Quote = {
       id: (quotes.length + 1).toString(),
-      customer: rfqData.customer.name,
-      products: availableProducts,
+      customer: rfqData.customer,
+      items: availableProducts,
       totalPrice,
       status: "draft",
       createdAt: new Date(),
