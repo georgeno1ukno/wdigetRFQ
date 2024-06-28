@@ -21,12 +21,16 @@ interface Quote {
   createdAt: Date;
 }
 
-const QuoteDashboard: React.FC = () => {
+interface QuoteDashboardProps {
+  refreshTrigger: boolean;
+}
+
+const QuoteDashboard: React.FC<QuoteDashboardProps> = ({ refreshTrigger }) => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
     fetchQuotes();
-  }, []);
+  }, [refreshTrigger]);
 
   const fetchQuotes = async () => {
     const quotes = await getQuotes();

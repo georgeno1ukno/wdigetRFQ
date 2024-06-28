@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { submitRFQ } from "../services/api";
 
-const RFQForm: React.FC = () => {
+interface RFQFormProps {
+  onRFQSubmitted: () => void;
+}
+
+const RFQForm: React.FC<RFQFormProps> = ({ onRFQSubmitted }) => {
   const [emailContent, setEmailContent] = useState("");
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     await submitRFQ(emailContent);
     setEmailContent("");
-    alert("RFQ submitted successfully");
+    onRFQSubmitted();
   };
 
   return (
