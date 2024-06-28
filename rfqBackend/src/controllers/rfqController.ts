@@ -11,6 +11,8 @@ export const handleRFQ = async (req: Request, res: Response) => {
   try {
     // Extract RFQ data from email content
     const rfqData = await extractRFQData(emailContent);
+
+    console.log("data", rfqData);
     //check inventory for availability and pricing, dummy logic
     const availableProducts = await checkInventory(rfqData.products);
 

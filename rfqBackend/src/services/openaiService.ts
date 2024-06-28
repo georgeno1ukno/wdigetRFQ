@@ -7,6 +7,7 @@ const openai = new OpenAI({
 
 //extracted RFQ data from email content
 export const extractRFQData = async (emailContent: string) => {
+  console.log("emailContent", emailContent);
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo-0125",
     messages: [
@@ -22,6 +23,7 @@ export const extractRFQData = async (emailContent: string) => {
     ],
   });
 
+  console.log("response ", JSON.stringify(response));
   const rfqData = response.choices[0].message?.content;
   const parsedData = rfqData ? JSON.parse(rfqData) : null;
   return parsedData;
