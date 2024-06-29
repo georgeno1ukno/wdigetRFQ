@@ -1,16 +1,3 @@
-# Node.js
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# TypeScript
-*.tsbuildinfo
-.env
-
-# React
-build/
-dist/
-
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
