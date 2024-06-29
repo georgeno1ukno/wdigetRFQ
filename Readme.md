@@ -20,7 +20,6 @@ This implementation doesn't have connection to DB for manage Inventory. It's usi
   - Express
   - TypeScript
   - Jest (for testing)
-  - Supertest (for API testing)
   - OpenAI API
 - **Frontend**:
   - React
