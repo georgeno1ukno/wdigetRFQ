@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+# RFQ Processing Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a frontend application for processing Requests for Quotes (RFQs) using React and TypeScript. The application allows users to submit RFQ emails, view generated quotes, and finalize quotes for customers.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Submit RFQ emails to be processed.
+- View a list of generated quotes.
+- Finalize quotes and send them to customers.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React
+- TypeScript
+- Axios (for API requests)
+- CSS for styling
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm installed.
+- Backend server running.
 
-### `npm run build`
+## Directory Structure and Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. `src/` Directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **components/:** Contains the React components used in the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - `QuoteDashboard.tsx:` Displays a list of quotes and allows finalizing them.
+  - `RFQForm.tsx:` Allows submitting RFQs to be processed.
 
-### `npm run eject`
+- **services/:** Contains the API service for interacting with the backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - `api.ts:` Defines functions for submitting RFQ emails, retrieving quotes, and finalizing quotes.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **styles/:** Contains CSS files for styling the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - `App.css:` Basic styling for the application.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **App.tsx:** Main application component that renders `RFQForm` and `QuoteDashboard` components.
 
-## Learn More
+- **index.tsx:** Entry point of the React application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 2. Configuration Files
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **public/:** Contains the public assets and the main `index.html` file.
+- **package.json:** Lists the project dependencies and scripts.
+- **tsconfig.json:** Configuration file for TypeScript, specifying compiler options.
+
+### Usage
+
+#### Submitting an RFQ
+
+1. Enter the RFQ email content into the text area in the "Submit RFQ" section.
+2. Click the "Submit RFQ" button.
+3. The RFQ will be processed, and a new quote will be generated.
+
+#### Viewing Quotes
+
+1. Navigate to the "Quote Dashboard" section.
+2. View the list of generated quotes with customer details and item information.
+3. Click the "Finalize Quote" button to finalize a quote.
+
+## Styling
+
+- Basic CSS styles are applied for better UI/UX.
+- Styles are located in the `src/styles` folder.
+
+## Acknowledgements
+
+- [Axios](https://github.com/axios/axios) for handling API requests.
+- [Create React App](https://github.com/facebook/create-react-app) for setting up the React project.
+
+## Getting Started for local enviroment
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/georgeno1ukno/wdigetRFQ.git
+cd rfqFrontend/rfq-frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Application
+
+The application will start on port 3000 by default.
+
+```bash
+npm start
+```
