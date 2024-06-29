@@ -1,5 +1,7 @@
 # RFQ Widget Processing Application
 
+Requirement for the challenge [RFQ SE Take Home](https://drive.google.com/file/d/1g-S4HUYLN7SPFT6JtIkrnUPHaHsSgfGq/view?usp=sharing)
+
 ## Overview
 
 This project is a full-stack application for processing Requests for Quotes (RFQs) for a metal service center. It leverages the latest AI tools to automatically convert customer RFQ emails into structured quotes, enabling salespeople simulate to respond with a single click. The application includes a backend server for handling RFQ processing and a frontend application for submitting RFQ emails, viewing quotes, and finalizing quotes.
