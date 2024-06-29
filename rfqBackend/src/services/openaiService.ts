@@ -65,7 +65,6 @@ export const extractRFQData = async (
     ],
   });
 
-  console.log("response ", JSON.stringify(response));
   const rfqDataString = response.choices[0].message?.content;
   const rfqData: RFQData = rfqDataString ? JSON.parse(rfqDataString) : null;
 
